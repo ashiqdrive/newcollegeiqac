@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/additional-specific.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <title>New College IQAC</title>
+</head>
+
+<body>
+  <div class="main-top-header container">
+    <div class="logo">
+      <img src="images/new_college_logo_png_small.png" alt="logo" height="100" width="80" />
+    </div>
+    <div>
+      <h2 class="main-title">The New college IQAC</h2>
+    </div>
+  </div>
+  <hr />
+  <div class="">
+    <br>
+    <form id="tomailform" class="form-horizontal container" method="POST" action='#'>
+      <fieldset>
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label font-weight-bold" for="department">
+            <h4>Department</h4>
+          </label>
+          <div class="col-md-6">
+            <input id="department" name="department" type="text" placeholder="Department Name"
+              class="form-control input-md">
+          </div>
+        </div>
+
+        <!-- Multiple Radios (inline) -->
+        <div class="form-group">
+          <label class="col-md-6 control-label" for="organizedby">
+            <h4>Organized by</h4>
+          </label>
+          <div class="col-md-6">
+            <label class="radio-inline" for="organizedby-0">
+              <input type="radio" name="organizedby" id="organizedby-0" value="Department" checked="checked">
+              Department
+            </label>
+            <label class="radio-inline" for="organizedby-1">
+              <input type="radio" name="organizedby" id="organizedby-1" value="Staff">
+              Staff
+            </label>
+          </div>
+        </div>
+
+        <!-- Text input-->
+        <div id="divstaffname" class="form-group">
+          <label class="col-md-4 control-label font-weight-bold" for="staffname">
+            <h4>Staff Name</h4>
+          </label>
+          <div class="col-md-6">
+            <input id="staffname" name="staffname" type="text" placeholder="Name of the staff"
+              class="form-control input-md">
+          </div>
+        </div>
+
+        <!-- Multiple Checkboxes -->
+        <div class="form-group">
+          <label class="col-md-4 control-label font-weight-bold" for="typeofprogram">
+            <h4>Type of Program</h4>
+          </label>
+          <div class="col-md-4">
+            <div class="checkbox">
+              <label for="typeofprogram-0">
+                <input type="checkbox" name="typeofprogram" id="typeofprogram-0" value="Seminar">
+                Seminar
+              </label>
+            </div>
+            <div class="checkbox">
+              <label for="typeofprogram-1">
+                <input type="checkbox" name="typeofprogram" id="typeofprogram-1" value="Workshop">
+                Workshop
+              </label>
+            </div>
+            <div class="checkbox">
+              <label for="typeofprogram-2">
+                <input type="checkbox" name="typeofprogram" id="typeofprogram-2" value="Guest Lecture">
+                Guest Lecture
+              </label>
+            </div>
+            <div class="checkbox">
+              <label for="typeofprogram-3">
+                <input type="checkbox" name="typeofprogram" id="typeofprogram-3" value="Orientation">
+                Orientation
+              </label>
+            </div>
+            <div class="checkbox">
+              <label for="typeofprogram-4">
+                <input type="checkbox" name="typeofprogram" id="typeofprogram-4" value="Refresher">
+                Refresher
+              </label>
+            </div>
+            <div class="checkbox">
+              <label for="typeofprogram-5">
+                <input type="checkbox" name="typeofprogram" id="typeofprogram-5" value="MOOC">
+                MOOC
+              </label>
+            </div>
+            <div class="checkbox">
+              <label for="typeofprogram-6">
+                <input type="checkbox" name="typeofprogram" id="typeofprogram-6" value="Training">
+                Training
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label font-weight-bold" for="resourceperson">
+            <h4>Resource Person / Chief Guest</h4>
+          </label>
+          <div class="col-md-6">
+            <input id="resourceperson" name="resourceperson" type="text" placeholder="" class="form-control input-md">
+          </div>
+        </div>
+
+        <br>
+        <div class="form-group">
+          <label class="col-md-4 control-label">
+            <h4>Date and Duration</h4>
+          </label>
+          <!-- Datepicker -->
+          <div class="form-group">
+            <label class="col-md-4 control-label font-weight-bold" for="startdate">Start Date</label>
+            <div class="col-md-6">
+              <input id="startdate" name="startdate" type="date">
+            </div>
+          </div>
+          <!-- Datepicker -->
+          <div class="form-group">
+            <label class="col-md-4 control-label font-weight-bold" for="enddate">End Date</label>
+            <div class="col-md-6">
+              <input id="enddate" name="enddate" type="date">
+            </div>
+          </div>
+        </div>
+        <!-- Appended Input-->
+        <div class="form-group">
+          <label class="col-md-2 control-label font-weight-bold" for="noofdays">No of days</label>
+          <div class="col-md-2">
+            <div class="input-group">
+              <input id="noofdays" name="noofdays" class="form-control" type="number">
+              <span class="input-group-addon">days</span>
+            </div>
+            <p class="help-block">enter only numbers</p>
+          </div>
+        </div>
+        <br>
+
+        <!-- Multiple Checkboxes -->
+        <div class="form-group">
+          <label class="col-md-4 control-label font-weight-bold" for="sponcer">
+            <h4>Sponsored Agency</h4>
+          </label>
+          <div class="col-md-4">
+            <div class="checkbox">
+              <label for="sponcer-0">
+                <input type="checkbox" name="sponcer" id="sponcer-0" value="Government">
+                Government
+              </label>
+            </div>
+            <div class="checkbox">
+              <label for="sponcer-1">
+                <input type="checkbox" name="sponcer" id="sponcer-1" value="DSTFIST">
+                DSTFIST
+              </label>
+            </div>
+            <div class="checkbox">
+              <label for="sponcer-2">
+                <input type="checkbox" name="sponcer" id="sponcer-2" value="NGO">
+                NGO
+              </label>
+            </div>
+            <div class="checkbox">
+              <label for="sponcer-3">
+                <input type="checkbox" name="sponcer" id="sponcer-3" value="Management">
+                Management
+              </label>
+            </div>
+            <div class="checkbox">
+              <label for="sponcer-4">
+                <input type="checkbox" name="sponcer" id="sponcer-4" value="Others">
+                Others
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Textarea -->
+        <div class="form-group">
+          <label class="col-md-6 control-label font-weight-bold" for="remarks">
+            <h4>Remarks / Comment / Brief report</h4>
+          </label>
+          <div class="col-md-6">
+            <textarea class="form-control" id="remarks" name="remarks"></textarea>
+          </div>
+        </div>
+        <!-- Button -->
+        <div class="form-group">
+          <div class="col-md-4">
+            <button id="submittomailform" name="submittomailform" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+
+
+  <script type="text/javascript">
+    // Shorthand for $( document ).ready()
+    $(function () {
+      var divstaffname = $('#divstaffname');
+      divstaffname.hide();
+      $('#tomailform input').on('change', function () {
+        var organizedBy = $('input[name=organizedby]:checked', '#tomailform').val();
+        if (organizedBy === "Department") {
+          $('#divstaffname').hide();
+        } else {
+          $('#divstaffname').show();
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
