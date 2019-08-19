@@ -24,7 +24,7 @@
   <hr />
   <div class="">
     <br>
-    <form id="tomailform" class="form-horizontal container" method="POST" action='#'>
+    <form id="tomailform" class="form-horizontal container" method="POST" enctype="multipart/form-data" action=' https://txpx22m5s6.execute-api.us-east-1.amazonaws.com/production/testsend' >
       <fieldset>
         <!-- Text input-->
         <div class="form-group">
@@ -207,6 +207,18 @@
             <textarea class="form-control" id="remarks" name="remarks"></textarea>
           </div>
         </div>
+
+        <!-- File Button -->
+        <div class="form-group">
+          <label class="col-md-4 control-label font-weight-bold" for="uploadeddocuments">
+            <h4>Documents</h4>
+          </label>
+          <div class="col-md-4">
+            <input id="uploadeddocuments" name="uploadeddocuments" class="input-file" type="file" multiple>
+            <p class="help-block">Upload documents if any</p>
+          </div>
+        </div>
+
         <!-- Button -->
         <div class="form-group">
           <div class="col-md-4">
@@ -217,7 +229,7 @@
     </form>
   </div>
 
-
+  <!-- All JQuery Scripts-->
   <script type="text/javascript">
     // Shorthand for $( document ).ready()
     $(function () {
@@ -231,6 +243,13 @@
           $('#divstaffname').show();
         }
       });
+      // //console log formdata as JSON
+      // $('#tomailform').on('submit', function (e) { //use on if jQuery 1.7+
+      //   e.preventDefault();  //prevent form from submitting
+      //   var data = $("#tomailform :input").serializeArray();
+      //   var JSONdata = JSON.stringify(data)
+      //   console.log(JSONdata); //use the console for debugging, F12 in Chrome, not alerts        
+      // });
     });
   </script>
 </body>
