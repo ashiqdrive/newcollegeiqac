@@ -1,0 +1,33 @@
+.radio-inline>* {
+    margin: 5px 5px;
+}
+
+.input-group-addon {
+    padding-left: 15px;
+}
+
+nav {
+    float: right;
+}
+
+.logo img {
+    float: left;
+    padding: 5px;
+}
+
+.main-title {
+    margin: 5px;
+    padding: 5px;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.centerFixed {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}

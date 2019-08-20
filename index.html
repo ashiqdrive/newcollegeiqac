@@ -6,13 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/additional-specific.css">
+  <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
   <script src="js/jquery-3.4.1.min.js"></script>
   <title>New College IQAC</title>
 </head>
 
 <body>
+  <div id=divLoadingSpinner class="centerFixed">
+    <div class="spinner-border text-success"></div>
+  </div>
+
   <div class="main-top-header container">
     <div class="logo">
       <img src="images/new_college_logo_png_small.png" alt="logo" height="100" width="80" />
@@ -227,75 +231,27 @@
           </div>
         </div> -->
 
-        <!-- Button -->
-        <div class="form-group">
-          <div class="col-md-4">
-            <button id="#submitButton" name="#submitButton" class="btn btn-primary">Submit</button>
+        <div id="divSucessAlert" hidden>
+          <div class="alert alert-success" role="alert">
+            <h4 class="alert-heading">Form Submitted</h4>
+            <hr>
+            <p class="mb-0">The Form has been sucessfully mailed to the IQAC of The New College</p>
           </div>
         </div>
 
+        <!-- Button -->
+        <div class="form-group">
+          <div class="col-md-4">
+            <button id="submitButton" name="submitButton" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
 
       </fieldset>
     </form>
   </div>
 
   <!-- All JQuery Scripts-->
-  <script type="text/javascript">
-    // Shorthand for $( document ).ready()
-    $(function () {
-
-      var toMailForm = $('#toMailForm');
-      var submitButton = $('#submitButton');
-      var divstaffname = $('#divstaffname');
-
-      divstaffname.hide();
-      $('#toMailForm input').on('change', function () {
-        var organizedBy = $('input[name=organizedby]:checked', '#toMailForm').val();
-        if (organizedBy === "Department") {
-          $('#divstaffname').hide();
-        } else {
-          $('#divstaffname').show();
-        }
-      });
-
-      //On submit button click
-      submitButton.on('click', function (e) {
-        e.preventDefault(); // avoid to execute the actual submit of the form.
-        var data = new FormData();
-        data.append('messageData', $("#toMailForm :input").serializeArray());
-        var filesList = document.getElementById('uploadeddocuments'); //get all files attached
-        for (var i = 0; i < filesList.files.length; i++) {
-          data.append('file', filesList.files[i]);
-        }
-        console.log(data)
-        $.ajax({
-          type: 'POST',
-          url: toMailForm.attr('action'),
-          enctype: 'multipart/form-data',
-          contentType: 'multipart/form-data',
-          data: data,
-          processData: false, //important
-          contentType: false,
-          success: function (data) {
-            console.log("SUCCESS IN AJAX");
-            console.log(data);
-          },
-          error: function (err) {
-            console.log('error  in AJAX');
-            console.log(err);
-          }
-        });
-
-        //console log formdata as JSON
-        // $('#toMailForm').on('submit', function (e) { //use on if jQuery 1.7+
-        //     //e.preventDefault();  //prevent form from submitting
-        //     var data = $("#toMailForm :input").serialize();
-        //     //var JSONdata = JSON.stringify(data)
-        //     console.log(data); //use the console for debugging, F12 in Chrome, not alerts        
-        // });
-      });
-    });
-  </script>
+  <script type="text/javascript" src="js/my_scripts.js" defer></script>
 </body>
 
 </html>
