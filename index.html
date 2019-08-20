@@ -7,7 +7,6 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
   <script src="js/jquery-3.4.1.min.js"></script>
   <title>New College IQAC</title>
 </head>
@@ -29,7 +28,7 @@
   <div class="">
     <br>
     <form id="toMailForm" class="form-horizontal container" method="POST" enctype="multipart/form-data"
-      action='http://localhost:8000/testsend'>
+      action='https://w8fmo1tt77.execute-api.us-east-1.amazonaws.com/dev/testsend'>
       <fieldset>
         <!-- Text input-->
         <div class="form-group">
@@ -56,6 +55,17 @@
               <input type="radio" name="organizedby" id="organizedby-1" value="Staff">
               Staff
             </label>
+          </div>
+        </div>
+
+        <!-- Text input-->
+        <div id="divtitleofprogram" class="form-group">
+          <label class="col-md-4 control-label font-weight-bold" for="titleofprogram">
+            <h4>Title of the program</h4>
+          </label>
+          <div class="col-md-6">
+            <input id="titleofprogram" name="titleofprogram" type="text" placeholder="Title of the program"
+              class="form-control input-md">
           </div>
         </div>
 
@@ -251,7 +261,9 @@
   </div>
 
   <!-- All JQuery Scripts-->
+  <!-- -->
   <script type="text/javascript" src="js/my_scripts.js" defer></script>
+  <!-- -->
 </body>
 
 </html>

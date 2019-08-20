@@ -34,10 +34,10 @@ $(function () {
             type: 'POST',
             url: toMailForm.attr('action'),
             enctype: 'multipart/form-data',
-            contentType: 'multipart/form-data',
+            //contentType: 'multipart/form-data',
             data: data,
             processData: false, //important
-            contentType: false,
+            contentType: false
         }).done(function (i) {
             afterFormSubmitted();
             divSucessAlert.attr("hidden",false);
