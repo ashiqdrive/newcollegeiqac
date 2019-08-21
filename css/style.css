@@ -1,27 +1,40 @@
-.radio-inline>* {
+p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+#intro {
+    background-color: #324091;
+    box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 0px 0px 20px 20px;
+}
+
+#intro .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #F06292;
+    border-color: #F06292;
+}
+
+#intro h1, #intro h4 {
+    color: #f1f1f1;
+    font-family: 'Fredoka One', cursive;
+    font-weight: 800;
+    letter-spacing: 4px;
+}
+
+#intro p {
+    font-family: 'Open Sans', sans-serif;
+    color: #f1f1f1;
+}
+
+/* Intro ends */
+
+/* body */
+
+.radio-inline {
     margin: 5px 5px;
 }
 
 .input-group-addon {
     padding-left: 15px;
-}
-
-nav {
-    float: right;
-}
-
-.logo img {
-    float: left;
-    padding: 5px;
-}
-
-.main-title {
-    margin: 5px;
-    padding: 5px;
-}
-
-body {
-    /*font-family: 'Ubuntu', sans-serif;*/
 }
 
 .centerFixed {
@@ -30,4 +43,18 @@ body {
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: 100;
+}
+
+/* Footer */
+
+.footer-copyright {
+    background-color: #324091;
+}
+
+footer {
+    color: #f1f1f1;
+}
+
+footer a {
+    color: #f1f1f1
 }

@@ -3,9 +3,10 @@ $(function () {
     var toMailForm = $('#toMailForm');
     var submitButton = $('#submitButton');
     var divstaffname = $('#divstaffname');
-    var divLoadingSpinner = $('#divLoadingSpinner')
-    var divSucessAlert = $('#divSucessAlert')
-
+    var divLoadingSpinner = $('#divLoadingSpinner');
+    var divSucessAlert = $('#divSucessAlert');
+    var successModal = $('#successModal');
+    
     divLoadingSpinner.hide();
     divstaffname.hide();
 
@@ -40,7 +41,7 @@ $(function () {
             contentType: false
         }).done(function (i) {
             afterFormSubmitted();
-            divSucessAlert.attr("hidden",false);
+            successModal.modal('show');
         }).catch(function (e) {
             afterFormSubmitted();
             alert("There was an error");
