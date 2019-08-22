@@ -42,6 +42,8 @@ $(function () {
         }).done(function (i) {
             afterFormSubmitted();
             successModal.modal('show');
+            divSucessAlert.attr("hidden",false);
+            document.getElementById("toMailForm").reset();
         }).catch(function (e) {
             afterFormSubmitted();
             alert("There was an error");

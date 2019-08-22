@@ -2,9 +2,25 @@ p {
     font-family: 'Open Sans', sans-serif;
 }
 
+button{
+    border-radius: 85px 85px 85px 85px !important;
+}
+
+a.btn{
+    border-radius: 35px 35px 35px 35px !important;
+}
+
+/* Navbar */
+.navbar{
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.50) !important;
+}
+/* Navbar*/
+
+/* INtro */
+
 #intro {
     background-color: #324091;
-    box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.75);
     border-radius: 0px 0px 20px 20px;
 }
 
@@ -15,7 +31,7 @@ p {
 
 #intro h1, #intro h4 {
     color: #f1f1f1;
-    font-family: 'Fredoka One', cursive;
+    font-family: 'Oswald', sans-serif;
     font-weight: 800;
     letter-spacing: 4px;
 }
