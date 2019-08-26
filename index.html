@@ -104,7 +104,38 @@
     <form id="toMailForm" class="form-horizontal container" method="POST" enctype="multipart/form-data"
       action='https://w8fmo1tt77.execute-api.us-east-1.amazonaws.com/dev/testsend'>
       <fieldset>
-        <!-- Text input required-->
+
+        <!-- Select Department-->
+        <div class="form-group">
+          <label class="col-md-6 control-label font-weight-bold" for="department">
+            <h4>Department</h4>
+          </label>
+          <div class="col-md-6">
+            <select id="department" name="department" class="form-control">
+              <option value="Arabic">Arabic</option>
+              <option value="Bank Management">Bank Management</option>
+              <option value="BCA">BCA</option>
+              <option value="Biotechnology">Biotechnology</option>
+              <option value="Business Administration">Business Administration</option>
+              <option value="Chemistry">Chemistry</option>
+              <option value="Commerce">Commerce</option>
+              <option value="Computer Science">Computer Science</option>
+              <option value="Corporate Secretaryship">Corporate Secretaryship</option>
+              <option value="Economics">Economics</option>
+              <option value="English">English</option>
+              <option value="History">History</option>
+              <option value="Information Systems Management">Information Systems Management</option>
+              <option value="Mathematics">Mathematics</option>
+              <option value="Physics">Physics</option>
+              <option value="Plant Biology">Plant Biology</option>
+              <option value="Sociology">Sociology</option>
+              <option value="Urdu">Urdu</option>
+              <option value="Zoology">Zoology</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Text input required
         <div class="form-group">
           <label class="col-md-6 control-label font-weight-bold" for="department">
             <h4>Department</h4>
@@ -113,7 +144,7 @@
             <input required id="department" name="department" type="text" placeholder="Department Name"
               class="form-control input-md">
           </div>
-        </div>
+        </div>-->
 
         <!-- Text input required-->
         <div id="divtitleofprogram" class="form-group">
