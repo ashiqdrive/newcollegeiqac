@@ -3,11 +3,10 @@ $(function () {
     var toMailForm = $('#toMailForm');
     var submitButton = $('#submitButton');
     var divstaffname = $('#divstaffname');
-    var divLoadingSpinner = $('#divLoadingSpinner');
     var divSucessAlert = $('#divSucessAlert');
     var successModal = $('#successModal');
+    var loadMe = $("#loadMe");
     
-    divLoadingSpinner.hide();
     divstaffname.hide();
 
     $('#toMailForm input').on('change', function () {
@@ -22,7 +21,11 @@ $(function () {
     //On submit
     toMailForm.on('submit', function (e) {
         e.preventDefault(); // avoid to execute the actual submit of the form.
-        divLoadingSpinner.show();
+        loadMe.modal({
+            backdrop: "static", //remove ability to close modal with click
+            keyboard: false, //remove option to close with keyboard
+            show: true //Display loader!
+          });
         submitButton.attr("disabled", true);
         var data = new FormData(this);
         //data.append('messageData', $("#toMailForm :input"));
@@ -60,6 +63,6 @@ $(function () {
     function afterFormSubmitted() {
         //this function is called whether the form submission fails or passes
         submitButton.attr("disabled", false);
-        divLoadingSpinner.hide();
+        loadMe.modal("hide");
     };
 });

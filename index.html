@@ -18,11 +18,6 @@
 </head>
 
 <body>
-  <!--Spinner-->
-  <div id=divLoadingSpinner class="centerFixed">
-    <div class="spinner-border text-success"></div>
-  </div>
-  <!--END Spinner-->
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#"></a>
@@ -42,7 +37,6 @@
       </ul>
     </div>
   </nav>
-
   <!-- END NAVIGATION-->
 
   <!-- intro-->
@@ -80,27 +74,6 @@
       <h3>Report Submission Form</h3>
     </label>
     <br>
-    <!-- Success MODAL-->
-    <div id='successModal' class="modal" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Form Submitted</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <p>The Form has been successfully mailed to the IQAC of The New College</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-dismiss="modal">Okay</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- END of Sucess MODAL-->
-
     <form id="toMailForm" class="form-horizontal container" method="POST" enctype="multipart/form-data"
       action='https://w8fmo1tt77.execute-api.us-east-1.amazonaws.com/dev/testsend'>
       <fieldset>
@@ -134,17 +107,6 @@
             </select>
           </div>
         </div>
-
-        <!-- Text input required
-        <div class="form-group">
-          <label class="col-md-6 control-label font-weight-bold" for="department">
-            <h4>Department</h4>
-          </label>
-          <div class="col-md-6">
-            <input required id="department" name="department" type="text" placeholder="Department Name"
-              class="form-control input-md">
-          </div>
-        </div>-->
 
         <!-- Text input required-->
         <div id="divtitleofprogram" class="form-group">
@@ -336,15 +298,9 @@
           <div class="col-md-6">
             <input id="uploadeddocuments" name="uploadeddocuments" class="input-file" type="file" multiple>
             <p class="help-block">Upload documents if any</p>
+            <p class="help-block">Documents should not exceed more than 2MB</p>
           </div>
         </div>
-
-        <!-- Button
-        <div class="form-group">
-          <div class="col-md-6">
-            <button id="submittoMailForm" name="submittoMailForm" class="btn btn-primary">Submit</button>
-          </div>
-        </div> -->
 
         <div id="divSucessAlert" hidden>
           <div class="alert alert-success" role="alert">
@@ -367,7 +323,7 @@
   </div>
 
   <!-- Script for form-->
-  <script type="text/javascript" src="js/main_form.js" defer></script>
+  <!-- <script type="text/javascript" src="js/main_form.js" defer></script> -->
   <!-- END of Script for form-->
 
   <!-- 
@@ -387,7 +343,48 @@
   <!-- JS Scripts-->
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <!-- Script for form-->
+  <script type="text/javascript" src="js/main_form.js" defer></script>
+  <!-- END of Script for form-->
   <!-- JS Scripts-->
+
+  <!-- Success MODAL-->
+  <div id='successModal' class="modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Form Submitted</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>The Form has been successfully mailed to the IQAC of The New College</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Okay</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END of Sucess MODAL-->
+
+  <!-- Modal loading modal while form is being sent to the server -->
+  <div class="modal fade" id="loadMe" tabindex="-1" role="dialog" aria-labelledby="loadMeLabel">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content">
+        <div class="modal-body text-center">
+          <div class="loader"></div>
+          <div clas="loader-txt">
+            <p>Please wait while the data is being sent
+              <br><br>
+              <small>Thanks for your patience</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END Modal loading modal -->
 </body>
 
 </html>
