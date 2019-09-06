@@ -74,8 +74,10 @@
       <h3>Report Submission Form</h3>
     </label>
     <br>
+    <!-- <form id="toMailForm" class="form-horizontal container" method="POST" enctype="multipart/form-data"
+      action='https://w8fmo1tt77.execute-api.us-east-1.amazonaws.com/dev/testsend'> -->
     <form id="toMailForm" class="form-horizontal container" method="POST" enctype="multipart/form-data"
-      action='https://w8fmo1tt77.execute-api.us-east-1.amazonaws.com/dev/testsend'>
+      action='http://localhost:8000/testsend'>
       <fieldset>
 
         <!-- Select Department-->
@@ -290,6 +292,18 @@
           </div>
         </div>
 
+        <!-- Text input required-->
+        <div id="senderemail" class="form-group">
+          <label class="col-md-6 control-label font-weight-bold" for="senderemail">
+            <h4>Sender Email</h4>
+          </label>
+          <div class="col-md-6">
+            <input required id="senderemail" name="senderemail" type="email" placeholder="Email"
+              class="form-control input-md">
+            <p class="help-block">A copy of the submitted form is sent to this mail for confirmation and reference</p>
+          </div>
+        </div>
+
         <!-- File Button -->
         <div class="form-group">
           <label class="col-md-6 control-label font-weight-bold" for="uploadeddocuments">
@@ -298,7 +312,7 @@
           <div class="col-md-6">
             <input id="uploadeddocuments" name="uploadeddocuments" class="input-file" type="file" multiple>
             <p class="help-block">Upload documents if any</p>
-            <p class="help-block">Documents should not exceed more than 2MB</p>
+            <p class="help-block">Documents should not exceed more than 5MB</p>
           </div>
         </div>
 
